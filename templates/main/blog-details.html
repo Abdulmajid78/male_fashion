@@ -62,6 +62,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="blog__details__btns">
                             <div class="row">
                                 {% if object.get_previous_by_created_at %}
@@ -92,8 +94,8 @@
                                     {% for comment in object.comments.values %}
                                         <strong>{{ comment.name }}</strong>
                                         <div>
-                                            <p class="my-5">{{ comment.comment }}</p>
-                                            <small class="d-flex justify-content-end">{{ comment.created_at|timesince }}ago</small>
+                                            <p class="mt-5">{{ comment.comment }}</p>
+                                            <small class="d-flex justify-content-end">{{ comment.created_at|timesince }} ago</small>
                                         </div>
                                         <hr>
                                     {% endfor %}
@@ -122,6 +124,8 @@
                                 </div>
                             </form>
                         </div>
+
+
                     </div>
                 </div>
             </div>
